@@ -95,7 +95,57 @@
       </div>
     </aside>
     <!-- end sidebar  -->
-    
+
+    <!-- cart overlay -->
+    <div class="cart-overlay">
+      <!-- close btn  -->
+      <button class="cart-close-btn">
+        <i class="fa fa-times"></i>
+      </button>
+      <!-- end close btn  -->
+      <!-- cart  -->
+      <aside class="cart">
+        <!-- header  -->
+        <header>
+          <h3>your bag</h3>
+        </header>
+        <!-- end header  -->
+        <!-- cart items  -->
+        <div class="cart-items">
+          <article class="cart-item" data-id="1">
+            <img
+              src="https://images.pexels.com/photos/1668860/pexels-photo-1668860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="furniture"
+              class="cart-img"
+            />
+            <!-- cart info  -->
+            <div class="cart-info">
+              <h4 class="cart-info-name">Art Leon Swivel</h4>
+              <p class="cart-info-price">$20.99</p>
+              <button class="cart-info-remove-btn btn">remove</button>
+            </div>
+            <!-- end cart info -->
+            <div class="cart-info-btn">
+              <button class="cart-info-increase-btn">
+                <i class="fa-solid fa-chevron-up"></i>
+              </button>
+              <span class="cart-info-quantity">1</span>
+              <button class="cart-info-decrease-btn">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+        <!-- end cart items  -->
+        <footer>
+          <h3 class="cart-total">total: $20.99</h3>
+          <button class="cart-checkout-btn btn">checkout</button>
+        </footer>
+        <!-- end cart items  -->
+      </aside>
+      <!-- end cart  -->
+    </div>
+    <!-- end cart  -->
     <script src="./index.js" type="module"></script>
   </body>
 </html>
