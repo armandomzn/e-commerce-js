@@ -469,6 +469,7 @@ Navbar
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
+  z-index: -1;
   transition: var(--transition);
 }
 
@@ -490,6 +491,7 @@ Navbar
 .show-cart-overlay {
   opacity: 1;
   visibility: visible;
+  z-index: 5;
 }
 
 .show-cart-overlay .cart {
@@ -650,4 +652,196 @@ Navbar
 .about-img {
   height: 20rem;
   border-radius: var(--border-radius);
+}
+
+/* Featured Products  */
+.featured-products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(358px, 100%), 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.center-all-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product {
+  background: var(--primary-200);
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  box-shadow: var(--shadow-3);
+}
+
+.product-container {
+  position: relative;
+}
+
+.product-container img {
+  height: 15rem;
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+}
+
+.product-container:hover .product-icons {
+  opacity: 1;
+}
+
+.product-container::before {
+  content: "";
+  transition: background 0.5s ease-in-out;
+}
+
+.product-container:hover::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.product-icons {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-cart-btn,
+.product-search-btn {
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--primary-500);
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-100);
+  transition: var(--transition);
+}
+
+.product-cart-btn:hover,
+.product-search-btn:hover {
+  background: var(--white);
+  color: var(--primary-500);
+}
+
+.product footer {
+  padding: 1rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.product-name,
+.product-price {
+  margin-bottom: 0;
+  justify-self: center;
+  color: var(--primary-600);
+  font-weight: bold;
+  letter-spacing: var(--letter-spacing);
+}
+
+.product-name {
+  text-align: center;
+}
+
+.product-price {
+  color: var(--primary-700);
+}
+
+/* Products  */
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .products {
+    grid-template-columns: 12.5rem 1fr;
+  }
+}
+
+.products-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(291px, 100%), 1fr));
+}
+
+/* Filters  */
+
+.filters {
+  display: grid;
+  row-gap: 1rem;
+  align-content: start;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: transparent;
+  background: var(--grey-100);
+  border-radius: 1px;
+  letter-spacing: var(--letter-spacing);
+  box-shadow: var(--shadow-1);
+}
+
+::placeholder {
+  color: var(--grey-500);
+  letter-spacing: var(--letter-spacing);
+}
+
+.error {
+  font-size: 2rem;
+  color: var(--primary-700);
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  letter-spacing: var(--letter-spacing);
+}
+
+.companies-filter-container h3,
+.range-filter-container h3 {
+  font-size: clamp(0.875rem, 5vw, 1rem);
+  font-weight: bold;
+  color: var(--primary-800);
+  margin-bottom: 1rem;
+  letter-spacing: var(--letter-spacing);
+}
+
+.companies-btn-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 311px), 1fr));
+}
+
+@media (min-width: 768px) {
+  .companies-btn-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.company-btn {
+  border-radius: 0.25rem;
+  letter-spacing: var(--letter-spacing);
+}
+
+.price-value {
+  font-size: clamp(0.5rem, 5vw, 0.875rem);
+  color: var(--primary-500);
+  letter-spacing: var(--letter-spacing);
 }
