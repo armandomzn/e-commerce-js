@@ -21,7 +21,7 @@ export const rangeFilter = (store) => {
       return product.price <= value;
     });
     priceValue.innerHTML = `Value: $${value}`;
-    displayProducts(newStore, productContainer);
+    displayProducts(newStore, productContainer, true);
     if (newStore.length === 0) {
       productContainer.classList.add("error");
       productContainer.innerHTML = `<h3>No products match with the search</h3>`;

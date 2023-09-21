@@ -9,7 +9,7 @@ import { getElement } from "./src/utils.js";
 window.addEventListener("DOMContentLoaded", (e) => {
   setupStore(productsData);
   displayProducts(
-    store.slice(0,3),
+    store.slice(0, 3),
     getElement(".featured-products-container")
   );
 });

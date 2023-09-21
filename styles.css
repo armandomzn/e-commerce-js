@@ -537,6 +537,8 @@ Navbar
 
 .cart-items {
   align-self: self-start;
+  display: grid;
+  gap: 2rem;
 }
 
 .cart-item {

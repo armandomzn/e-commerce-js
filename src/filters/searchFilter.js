@@ -10,7 +10,7 @@ export const searchFilter = (store) => {
 
     const value = inputForm.value.toLowerCase();
     if (!value) {
-      displayProducts(store, productContainer);
+      displayProducts(store, productContainer, true);
       return;
     }
     let newStore = store.filter((product) => {
@@ -19,7 +19,7 @@ export const searchFilter = (store) => {
         return product;
       }
     });
-    displayProducts(newStore, productContainer);
+    displayProducts(newStore, productContainer, true);
     if (newStore.length < 1) {
       productContainer.classList.add("error");
       productContainer.innerHTML = `<h3 class="error">No products match with the search</h3>`;

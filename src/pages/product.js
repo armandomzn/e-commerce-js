@@ -2,10 +2,11 @@ import "../toggleSidebar.js";
 import "../cart/toggleCart.js";
 import "../cart/setupCart.js";
 import { store } from "../store.js";
-import { getElement } from "../utils.js";
+import { formatPrice, getElement } from "../utils.js";
 import { addToCart } from "../cart/setupCart.js";
 
 const sectionCenter = getElement(".single-products .section-center");
+const pageName = getElement(".page-name");
 
 window.addEventListener("DOMContentLoaded", (e) => {
   const productId = new URL(window.location).searchParams.get("id");
@@ -17,7 +18,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
     return;
   }
   const { id, name, price, image, description, company, colors } = product;
-  console.log(sectionCenter);
+  pageName.textContent = `Home / ${name}`;
+  document.title = `E-Commerce | ${name}`;
   sectionCenter.innerHTML = `
     <article class="single-product">
           <img
@@ -28,7 +30,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
           <div class="single-product-info">
             <h2 class="single-product-name">${name}</h2>
             <p class="single-product-company">${company}</p>
-            <p class="single-product-price">$${price}</p>
+            <p class="single-product-price">$${formatPrice(price)}</p>
             <div class="single-product-color-container">
               ${colors
                 .map((color) => {

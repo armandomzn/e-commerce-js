@@ -20,3 +20,9 @@ export const setupStore = (products) => {
   });
   setStorage("productsStore", store);
 };
+
+export const findProduct = (id) => {
+  return store.find((product) => {
+    return product.id === id;
+  });
+};

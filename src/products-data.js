@@ -150,7 +150,7 @@ export const productsData = [
       image:
         "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       description:
-        "The Luxury Dining Set by LuxuryLiving redefines opulence in your dining space. Available in deep charcoal or serene soft blue, this set includes a magnificent dining table and matching chairs. Crafted with precision and an eye for luxury, it's a symbol of extravagance. Priced at $1,899, it's an investment in timeless elegance and comfort for your dining area",
+        "The Luxury Dining Set by LuxuryLiving redefines opulence in your dining space. Available in deep charcoal or serene soft blue, this set includes a magnificent dining table and matching chairs. Crafted with precision and an eye for luxury, it's a symbol of extravagance. Priced at $200, it's an investment in timeless elegance and comfort for your dining area",
     },
   },
   {
@@ -164,7 +164,7 @@ export const productsData = [
       image:
         "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       description:
-        "The Modern Dining Set by ModernDesigns is the embodiment of contemporary style and functionality. Whether in sleek steel gray or refreshing cool white, this set includes a modern dining table and comfortable chairs. Crafted with precision, it's designed to elevate your dining experience. With a price of $1,499, it's an excellent choice for those who appreciate modern aesthetics and quality craftsmanship",
+        "The Modern Dining Set by ModernDesigns is the embodiment of contemporary style and functionality. Whether in sleek steel gray or refreshing cool white, this set includes a modern dining table and comfortable chairs. Crafted with precision, it's designed to elevate your dining experience. With a price of $800, it's an excellent choice for those who appreciate modern aesthetics and quality craftsmanship",
     },
   },
 ];

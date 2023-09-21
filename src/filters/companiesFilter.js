@@ -29,6 +29,6 @@ export const companiesFilter = (store) => {
           return product.company === e.target.textContent;
         });
     }
-    displayProducts(newStore, productsContainer);
+    displayProducts(newStore, productsContainer, true);
   });
 };
