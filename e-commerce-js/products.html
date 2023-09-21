@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce | Products</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon-16x16.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="nav">
+      <!-- nav center  -->
+      <div class="nav-center">
+        <!-- cart btn  -->
+        <div class="toggle-cart-container">
+          <button class="toggle-cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count-item">0</span>
+          </button>
+        </div>
+        <!-- end cart btn  -->
+        <h1 class="logo">js store</h1>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <!-- nav links  -->
+        <ul class="nav-links">
+          <li><a href="./index.html"> home </a></li>
+          <li><a href="./about.html"> about </a></li>
+          <li><a href="./products.html"> products </a></li>
+        </ul>
+        <!-- end nav links  -->
+      </div>
+      <!-- end nav center  -->
+    </nav>
+    <!-- end nav  -->
+
+    <!-- sidebar  -->
+    <aside class="sidebar">
+      <button class="close-btn">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="section-center">
+        <ul class="sidebar-links">
+          <li>
+            <a href="./index.html">
+              <i class="fa-solid fa-house"></i>
+              home
+            </a>
+          </li>
+          <li>
+            <a href="./about.html">
+              <i class="fa-solid fa-chair"></i>
+              about
+            </a>
+          </li>
+          <li>
+            <a href="./products.html">
+              <i class="fa-solid fa-book"></i>
+              products
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- end sidebar  -->
+
+    <!-- cart overlay -->
+    <div class="cart-overlay">
+      <!-- cart  -->
+      <aside class="cart">
+        <!-- close btn  -->
+        <button class="cart-close-btn">
+          <i class="fa fa-times"></i>
+        </button>
+        <!-- end close btn  -->
+        <!-- header  -->
+        <header>
+          <h3>your bag</h3>
+        </header>
+        <!-- end header  -->
+        <!-- cart items  -->
+        <div class="cart-items"></div>
+        <!-- end cart items  -->
+        <footer>
+          <h3 class="cart-total">total: $20.99</h3>
+          <button class="cart-checkout-btn btn">checkout</button>
+        </footer>
+        <!-- end cart items  -->
+      </aside>
+      <!-- end cart  -->
+    </div>
+    <!-- end cart  -->
+    <div class="page-info">
+      <div class="section-center">
+        <h3 class="page-name">Home / Products</h3>
+      </div>
+    </div>
+    <!-- products  -->
+    <section class="section section-center products">
+      <!-- filters  -->
+      <div class="filters">
+        <!-- search filter container  -->
+        <div class="search-filter-container">
+          <!-- search filter  -->
+          <form class="search-filter">
+            <input type="text" class="search-input" placeholder="Search..." />
+          </form>
+          <!-- end search filter  -->
+        </div>
+        <div class="companies-filter-container">
+          <h3>company</h3>
+          <div class="companies-btn-container"></div>
+        </div>
+        <!-- end search filter container  -->
+        <!-- range filter  -->
+        <div class="range-filter-container">
+          <h3>price</h3>
+          <form class="price-filter">
+            <input type="range" class="range-input" />
+          </form>
+          <p class="price-value"></p>
+        </div>
+        <!-- end range filter  -->
+      </div>
+      <!-- end filters -->
+      <!-- products container  -->
+      <div class="products-container"></div>
+      <!-- end products container  -->
+    </section>
+    <!-- end products  -->
+    <script src="./src/pages/products.js" type="module"></script>
+  </body>
+</html>
