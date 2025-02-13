@@ -103,4 +103,4 @@ Opens the cart overlay to display the cart details.
 
 #### Live Example
 
-- [You can view a live version of this project here.](https://voluble-malasada-b51b69.netlify.app/products)
+- [You can view a live version of this project here.](https://voluble-malasada-b51b69.netlify.app)
